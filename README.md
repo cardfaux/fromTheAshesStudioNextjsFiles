@@ -7,6 +7,8 @@ SANITY_API_TOKEN=
 SANITY_PREVIEW_SECRET=
 ```
 
+2. run the dev server
+
 # http://localhost:3000 is where the website can be found.
 
 # http://localhost:3333 is where the sanity studio can be found.
