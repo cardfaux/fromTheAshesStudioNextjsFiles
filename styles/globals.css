@@ -67,4 +67,8 @@ div.mb-5.cards-list-items.row {
   .iONalh svg.smoke--background path {
     transform: scale(1.3);
   }
+  .row {
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
 }

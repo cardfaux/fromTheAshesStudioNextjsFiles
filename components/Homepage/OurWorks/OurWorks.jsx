@@ -14,7 +14,24 @@ const OurWorks = ({ projects }) => {
   return (
     <OurWorksSection className='our--works'>
       <h1>recent works</h1>
-      <Swiper
+      <div className='works--grid'>
+        {projects.map((project) => {
+          return (
+            <NewCardItem
+              key={project.slug}
+              slug={project.slug}
+              image={project.coverImage}
+              title={project.projectTitle}
+              subTitle={project.projectSubtitle}
+              link={{
+                href: '/projects/[slug]',
+                as: `/projects/${project.slug}`,
+              }}
+            />
+          );
+        })}
+      </div>
+      {/* <Swiper
         navigation={true}
         modules={[Navigation]}
         spaceBetween={0}
@@ -38,7 +55,7 @@ const OurWorks = ({ projects }) => {
         {projects.map((project, index) => {
           return (
             <SwiperSlide key={index}>
-              <Col key={index} md='12'>
+              <Col md='12'>
                 <NewCardItem
                   slug={project.slug}
                   image={project.coverImage}
@@ -53,7 +70,7 @@ const OurWorks = ({ projects }) => {
             </SwiperSlide>
           );
         })}
-      </Swiper>
+      </Swiper> */}
       <div className='phoenix--egg'>
         <PhoenixEgg />
       </div>
