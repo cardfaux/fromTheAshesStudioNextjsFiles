@@ -1,14 +1,14 @@
-import { Col } from 'react-bootstrap';
-import { Swiper, SwiperSlide } from 'swiper/react';
+// import { Col } from 'react-bootstrap';
+// import { Swiper, SwiperSlide } from 'swiper/react';
 
 import NewCardItem from '../NewCardItem';
 import PhoenixEgg from '../PhoenixEgg';
 
 import { OurWorksSection } from './OurWorksStyles';
-import 'swiper/css';
-import 'swiper/css/navigation';
+// import 'swiper/css';
+// import 'swiper/css/navigation';
 
-import { Navigation } from 'swiper';
+// import { Navigation } from 'swiper';
 
 const OurWorks = ({ projects }) => {
   return (
