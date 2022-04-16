@@ -4,13 +4,15 @@ import md from 'markdown-it';
 
 import PageLayout from '../../components/Layouts/PageLayout';
 
+import { ServicesSlugContainer } from 'styles/components/ServicesSlug';
+
 export default function PostPage({ frontmatter, content }) {
   return (
     <PageLayout>
-      <div className='prose mx-auto'>
+      <ServicesSlugContainer className='prose mx-auto'>
         <h1>{frontmatter.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: md().render(content) }} />
-      </div>
+      </ServicesSlugContainer>
     </PageLayout>
   );
 }

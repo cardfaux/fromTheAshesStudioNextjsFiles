@@ -20,8 +20,10 @@ const NewCardItem = ({ slug, image, title, subTitle, date, link }) => {
                     .url()}
                   alt='Card image cap'
                 />
-                <h3>{title}</h3>
-                <p>{subTitle}</p>
+                <h3>{title.length > 40 ? title.substr(0, 40) + '...' : title}</h3>
+                <p>
+                  {subTitle.length > 40 ? subTitle.substr(0, 40) + '...' : subTitle}
+                </p>
               </div>
             </article>
           </a>
@@ -39,8 +41,8 @@ const NewCardItem = ({ slug, image, title, subTitle, date, link }) => {
                 .url()}
               alt='Card image cap'
             />
-            <h3>{title}</h3>
-            <p>{subTitle}</p>
+            <h3>{title.length > 40 ? title.substr(0, 40) + '...' : title}</h3>
+            <p>{subTitle.length > 40 ? subTitle.substr(0, 40) + '...' : subTitle}</p>
           </div>
         </article>
       )}

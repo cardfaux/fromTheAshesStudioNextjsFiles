@@ -33,7 +33,7 @@ export default class MyDocument extends Document {
         <Head>
           <link
             rel='preload'
-            href='https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap'
+            href='https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap'
             as='font'
             crossOrigin=''
           />

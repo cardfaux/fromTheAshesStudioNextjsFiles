@@ -1,7 +1,6 @@
 import { useState } from 'react';
 
 import { Row, Button, Col } from 'react-bootstrap';
-import PageLayout from 'components/Layouts/PageLayout';
 import AuthorIntro from 'components/AuthorIntro';
 import FilteringMenu from 'components/FilteringMenu';
 import PreviewAlert from 'components/PreviewAlert';
@@ -14,6 +13,8 @@ import CardItem from 'components/CardItem';
 import CardListItem from 'components/CardListItem';
 // import CardListItemBlank from 'components/CardListItemBlank';
 import moment from 'moment';
+
+import { BlogsPageContainer } from 'styles/components/blogs/BlogsPage';
 
 export const BlogList = ({ data = [], filter }) => {
   return data.map((page) =>
@@ -59,7 +60,7 @@ export default function Home({ blogs, preview }) {
   const { data, size, setSize, hitEnd } = useGetBlogsPages({ filter });
 
   return (
-    <PageLayout>
+    <BlogsPageContainer>
       {preview && <PreviewAlert />}
       <AuthorIntro />
       <FilteringMenu
@@ -81,7 +82,7 @@ export default function Home({ blogs, preview }) {
           Load More
         </Button>
       </div>
-    </PageLayout>
+    </BlogsPageContainer>
   );
 }
 
