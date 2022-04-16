@@ -60,7 +60,7 @@ div.mb-5.cards-list-items.row {
   color: #3cd0ff !important;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 450px) {
   .custom-shape-divider-top-1649003621 svg {
     width: calc(350% + 1.3px);
   }

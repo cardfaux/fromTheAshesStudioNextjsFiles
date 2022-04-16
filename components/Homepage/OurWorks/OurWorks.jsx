@@ -13,7 +13,7 @@ import { Navigation } from 'swiper';
 const OurWorks = ({ projects }) => {
   return (
     <OurWorksSection className='our--works'>
-      <h1>our works</h1>
+      <h1>recent works</h1>
       <Swiper
         navigation={true}
         modules={[Navigation]}
