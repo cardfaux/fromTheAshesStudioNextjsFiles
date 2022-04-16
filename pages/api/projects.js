@@ -1,4 +1,4 @@
-import { getAllProjects, getPaginatedProjects } from 'lib/api';
+import { getPaginatedProjects } from 'lib/api';
 
 // export default async function getProjects(req, res) {
 //   const data = await getAllProjects();

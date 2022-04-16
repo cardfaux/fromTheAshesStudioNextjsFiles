@@ -56,8 +56,8 @@ const WhatWeDo = () => {
           </svg>
           <h3>Web App development</h3>
           <p>
-            Maybe you need an unique web application built and you don't know where
-            to start? We can help you with everything from the front-end to the
+            Maybe you need an unique web application built and you don`&apos;`t know
+            where to start? We can help you with everything from the front-end to the
             back-end and to production.
           </p>
         </TextOverlay>
@@ -91,8 +91,8 @@ const WhatWeDo = () => {
           <h3>Web Design / Dev</h3>
           <p>
             We do all general web design & web development work that your business
-            may need, allowing you to focus on your company and it's day to day
-            needs.
+            may need, allowing you to focus on your company and it`&apos;`s day to
+            day needs.
           </p>
         </TextOverlay>
         <div className='body--text'>

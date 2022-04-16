@@ -1,10 +1,9 @@
 import { useEffect, useState } from 'react';
 import PageLayout from 'components/Layouts/PageLayout';
 import BlogHeader from 'components/BlogHeader';
-import ErrorPage from 'next/error';
-import { getBlogBySlug, getAllBlogs, onBlogUpdate } from 'lib/api';
+// import ErrorPage from 'next/error';
+import { getBlogBySlug, getAllBlogs, onBlogUpdate, urlFor } from 'lib/api';
 import { Row, Col } from 'react-bootstrap';
-import { urlFor } from 'lib/api';
 import moment from 'moment';
 import { useRouter } from 'next/router';
 

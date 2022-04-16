@@ -1,9 +1,8 @@
 import PageLayout from '../../components/Layouts/PageLayout';
 import BlogHeader from 'components/BlogHeader';
 import ProjectContent from '../../components/ProjectsPage/ProjectContent';
-import { getProjectBySlug, getAllProjects } from 'lib/api';
+import { getProjectBySlug, getAllProjects, urlFor } from 'lib/api';
 import { Row, Col } from 'react-bootstrap';
-import { urlFor } from 'lib/api';
 import moment from 'moment';
 
 const ProjectDetail = ({ project }) => {

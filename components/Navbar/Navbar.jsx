@@ -4,7 +4,7 @@ import Link from 'next/link';
 import ActiveLink from './ActiveLink';
 import Logo from 'components/Homepage/Logo';
 import SvgBackground from '../svgBackground';
-import ThemeToggle from 'components/ThemeToggle';
+// import ThemeToggle from 'components/ThemeToggle';
 
 import { StyledNavbar, StyledHeader } from './NavbarStyles';
 

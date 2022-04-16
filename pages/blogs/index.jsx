@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { Row, Button } from 'react-bootstrap';
+import { Row, Button, Col } from 'react-bootstrap';
 import PageLayout from 'components/Layouts/PageLayout';
 import AuthorIntro from 'components/AuthorIntro';
 import FilteringMenu from 'components/FilteringMenu';
@@ -9,11 +9,10 @@ import PreviewAlert from 'components/PreviewAlert';
 import { useGetBlogsPages } from 'actions/pagination';
 import { getPaginatedBlogs } from 'lib/api';
 
-import { Col } from 'react-bootstrap';
 import CardItem from 'components/CardItem';
-import CardItemBlank from 'components/CardItemBlank';
+// import CardItemBlank from 'components/CardItemBlank';
 import CardListItem from 'components/CardListItem';
-import CardListItemBlank from 'components/CardListItemBlank';
+// import CardListItemBlank from 'components/CardListItemBlank';
 import moment from 'moment';
 
 export const BlogList = ({ data = [], filter }) => {

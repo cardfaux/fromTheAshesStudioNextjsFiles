@@ -1,6 +1,10 @@
 import Phoenix from '../Phoenix';
-import { StyledPhoenixContainer } from './AboveFoldStyles';
-import { FoldSection, FoldGrid, HeaderIconsContainer } from './AboveFoldStyles';
+import {
+  FoldSection,
+  FoldGrid,
+  HeaderIconsContainer,
+  StyledPhoenixContainer,
+} from './AboveFoldStyles';
 
 const AboveFold = () => {
   return (
@@ -14,11 +18,11 @@ const AboveFold = () => {
           </h2>
           <p>
             We are extremely passionate about what we do and have always put our
-            clients first. From the initial meet to the finish line, our team's
-            uniquely personal attention will keep you in the loop as your creative
-            experience unfolds. We have a lust for life and a passion for creation.
-            We look forward to the opportunity to work with you and welcome you to
-            our world.
+            clients first. From the initial meet to the finish line, our
+            team`&apos;`s uniquely personal attention will keep you in the loop as
+            your creative experience unfolds. We have a lust for life and a passion
+            for creation. We look forward to the opportunity to work with you and
+            welcome you to our world.
           </p>
           <p>
             Specializing in web design & development, Great visual design comes

@@ -19,7 +19,8 @@ export default function ServicesPage({ posts }) {
           From front-end to back-end, our custom web development team makes sure all
           the project components function just as they are designed. As seasoned
           experts in content management systems, responsive design, web app
-          development, and more, we're experienced at saying, “We've got this.”
+          development, and more, we`&apos;`re experienced at saying, “We`&apos;`ve
+          got this.”
         </p>
       </ServicesHeaderContainer>
       <ServicesContainer className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 p-0 md:p-0'>

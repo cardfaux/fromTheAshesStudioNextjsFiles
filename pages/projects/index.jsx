@@ -1,11 +1,12 @@
 import { useState } from 'react';
-import useSWR from 'swr';
+// import useSWR from 'swr';
 import { Row, Col, Button } from 'react-bootstrap';
 import PageLayout from '../../components/Layouts/PageLayout';
-import AuthorIntro from 'components/AuthorIntro';
+// import AuthorIntro from 'components/AuthorIntro';
 import ProjectsCardItem from '../../components/ProjectsPage/ProjectsCardItem';
 import CardListItem from 'components/CardListItem';
-import FilteringMenu, { FilteringProjectsMenu } from 'components/FilteringMenu';
+// import FilteringMenu, { FilteringProjectsMenu } from 'components/FilteringMenu';
+import FilteringMenu from 'components/FilteringMenu';
 
 import { useGetProjectsPages } from 'actions/pagination';
 import { getPaginatedProjects } from 'lib/api';

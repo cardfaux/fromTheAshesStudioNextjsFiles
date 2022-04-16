@@ -1,8 +1,8 @@
 import { FeaturedBlogSection } from './FeaturedBlogStyles';
 import NewCardItem from '../NewCardItem';
-import { urlFor } from 'lib/api';
+// import { urlFor } from 'lib/api';
 
-import moment from 'moment';
+// import moment from 'moment';
 
 const OurWorks = ({ featuredBlogs }) => {
   return (
@@ -12,6 +12,7 @@ const OurWorks = ({ featuredBlogs }) => {
         {featuredBlogs.map((blog) => {
           return (
             <NewCardItem
+              key={blog.slug}
               slug={blog.slug}
               image={blog.coverImage}
               title={blog.title}
