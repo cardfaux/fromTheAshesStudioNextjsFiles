@@ -1,4 +1,4 @@
-1. env variables
+1. env variables needed
 
 ```javascript
 SANITY_DATASET_NAME=
