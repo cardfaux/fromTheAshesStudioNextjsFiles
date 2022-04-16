@@ -19,12 +19,12 @@ export const FoldGrid = styled.div`
     grid-template-columns: 1fr;
     padding: 0 20px;
   }
-  @media (max-width: 368px) {
+  @media (max-width: 450px) {
     grid-template-rows: auto 6rem;
   }
   .text {
     z-index: 2;
-    @media (max-width: 368px) {
+    @media (max-width: 450px) {
       z-index: 2;
     }
     h1 {
@@ -59,7 +59,7 @@ export const StyledPhoenixContainer = styled.div`
   @media (max-width: 768px) {
     justify-self: left;
   }
-  @media (max-width: 368px) {
+  @media (max-width: 450px) {
     z-index: 1;
     opacity: 0.4;
   }
@@ -68,7 +68,7 @@ export const StyledPhoenixContainer = styled.div`
     @media (max-width: 768px) {
       width: 19rem;
     }
-    @media (max-width: 368px) {
+    @media (max-width: 450px) {
       width: 100%;
     }
   }
@@ -86,7 +86,7 @@ export const HeaderIconsContainer = styled.div`
     right: 0;
     padding-right: 20px;
   }
-  @media (max-width: 368px) {
+  @media (max-width: 450px) {
     width: 100%;
     justify-content: center;
     padding-right: 0;
@@ -100,7 +100,7 @@ export const HeaderIconsContainer = styled.div`
     justify-content: center;
     align-items: center;
     outline: 1px solid white;
-    @media (max-width: 368px) {
+    @media (max-width: 450px) {
       z-index: 2;
     }
 
