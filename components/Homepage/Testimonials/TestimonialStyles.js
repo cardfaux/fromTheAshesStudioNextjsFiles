@@ -6,10 +6,10 @@ export const TestimonialsStylesSection = styled.section`
   position: relative;
   padding: 30rem 0;
   @media (max-width: 768px) {
-    padding: 15rem 20px;
+    padding: 15rem 10px;
   }
   @media (max-width: 350px) {
-    padding: 8rem 20px;
+    padding: 8rem 10px;
     margin-bottom: 0;
   }
   .inside--testimonials__container {
@@ -77,6 +77,8 @@ export const TestimonialsStylesSection = styled.section`
       aspect-ratio: 1 / 1;
       background-color: #404071;
       border: inset;
+      border-color: #ffffff;
+      border-width: 5px;
     }
     article .top-image__container {
       position: relative;

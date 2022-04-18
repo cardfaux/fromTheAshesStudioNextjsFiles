@@ -7,8 +7,13 @@ export const ContactFormSection = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media (max-width: 768px) {
+    padding: 0 10px;
+  }
   @media (max-width: 350px) {
     padding-top: 8rem;
+    padding-right: 10px;
+    padding-left: 10px;
   }
   h5 {
     color: #ffffff;
@@ -67,7 +72,7 @@ export const SocialBlock = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
-
+  outline: 1px solid white;
   svg {
     z-index: 2;
   }

@@ -1,8 +1,6 @@
+import { DefaultSeo } from 'next-seo';
 import ThemeProvider from 'providers/ThemeProvider';
-import {
-  createGlobalStyle,
-  ThemeProvider as StyledThemeProvider,
-} from 'styled-components';
+import { ThemeProvider as StyledThemeProvider } from 'styled-components';
 import { library, config } from '@fortawesome/fontawesome-svg-core';
 import {
   faSun,
@@ -13,6 +11,9 @@ import {
   faSortNumericUp,
 } from '@fortawesome/free-solid-svg-icons';
 
+import SEO from '../next-seo.config';
+import GlobalStyle from '../styles/GlobalStyles';
+
 import '../styles/globals.css';
 import 'highlight.js/styles/dracula.css';
 import '@fortawesome/fontawesome-svg-core/styles.css';
@@ -22,14 +23,6 @@ import '../styles/index.scss';
 
 config.autoAddCss = false;
 library.add(faSun, faMoon, faList, faBorderAll, faSortNumericDown, faSortNumericUp);
-
-const GlobalStyle = createGlobalStyle`
-  body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-`;
 
 const theme = {
   colors: {
@@ -43,6 +36,7 @@ export default function App({ Component, pageProps }) {
       <GlobalStyle />
       <StyledThemeProvider theme={theme}>
         <ThemeProvider>
+          <DefaultSeo {...SEO} />
           <Component {...pageProps} />
         </ThemeProvider>
       </StyledThemeProvider>

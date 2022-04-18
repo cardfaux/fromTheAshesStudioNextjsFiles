@@ -4,7 +4,7 @@ export const StyledSection = styled.section`
   max-width: 1400px;
   margin: auto;
   @media (max-width: 768px) {
-    padding: 0 20px;
+    padding: 0 10px;
   }
   h2.what--title {
     color: #00b7f1;
@@ -50,12 +50,13 @@ export const TwoColumnGrid = styled.div`
 
 export const TextOverlay = styled.div`
   position: relative;
+  box-shadow: 4px 1px 20px 9px #fdfdfd26;
   /* position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0; */
-  outline: 4px solid #3bd0ff;
+  outline: 5px solid #3bd0ff;
   width: 439px;
   height: 268px;
   display: flex;

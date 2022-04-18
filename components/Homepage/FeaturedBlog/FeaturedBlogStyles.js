@@ -5,6 +5,9 @@ export const FeaturedBlogSection = styled.section`
   max-width: 1400px;
   margin: auto;
   padding-bottom: 10rem;
+  @media (max-width: 768px) {
+    padding: 0 10px;
+  }
   @media (max-width: 350px) {
     padding-bottom: 0;
   }
@@ -17,7 +20,7 @@ export const FeaturedBlogSection = styled.section`
     text-transform: uppercase;
     position: relative;
     @media (max-width: 768px) {
-      padding-left: 20px;
+      /* padding-left: 20px; */
     }
   }
   h1::before {
@@ -30,7 +33,7 @@ export const FeaturedBlogSection = styled.section`
     bottom: 0;
     left: 0;
     @media (max-width: 768px) {
-      margin-left: 20px;
+      /* margin-left: 20px; */
     }
   }
   .works--grid {
@@ -52,6 +55,10 @@ export const FeaturedBlogSection = styled.section`
       aspect-ratio: 1 / 1;
       /* background-color: #404071; */
       border: inset;
+      border-color: #ffffff;
+      border-width: 5px;
+      box-shadow: 4px 1px 20px 9px #00000047;
+      transition: border-color 0.3s ease-in-out;
       ::after {
         content: '';
         position: absolute;
@@ -63,6 +70,9 @@ export const FeaturedBlogSection = styled.section`
         height: 100%;
         opacity: 0.2;
         background-color: #ffffff;
+      }
+      :hover {
+        border-color: #3cd0ff;
       }
     }
     .works--item.featured {

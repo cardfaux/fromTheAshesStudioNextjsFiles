@@ -31,12 +31,22 @@ export default class MyDocument extends Document {
     return (
       <Html lang='en'>
         <Head>
+          <link rel='preconnect' href='https://fonts.googleapis.com' />
           <link
-            rel='preload'
-            href='https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap'
-            as='font'
-            crossOrigin=''
+            rel='preconnect'
+            href='https://fonts.gstatic.com'
+            crossOrigin='true'
           />
+          <link
+            href='https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=optional'
+            rel='stylesheet'
+          />
+          {/* <link
+            rel='preload'
+            href='https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=optional'
+            as='font'
+            crossOrigin='anonymous'
+          /> */}
         </Head>
         <body>
           <Main />

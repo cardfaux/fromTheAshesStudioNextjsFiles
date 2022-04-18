@@ -3,6 +3,9 @@ import styled from 'styled-components';
 export const OurWorksSection = styled.section`
   max-width: 1400px;
   margin: auto;
+  @media (max-width: 768px) {
+    padding: 0 10px;
+  }
   h1 {
     color: #3bd0ff;
     font-family: 'Josefin Sans', sans-serif;
@@ -12,7 +15,7 @@ export const OurWorksSection = styled.section`
     text-transform: uppercase;
     position: relative;
     @media (max-width: 768px) {
-      padding-left: 20px;
+      /* padding-left: 20px; */
     }
   }
   h1::before {
@@ -25,7 +28,7 @@ export const OurWorksSection = styled.section`
     bottom: 0;
     left: 0;
     @media (max-width: 768px) {
-      margin-left: 20px;
+      /* margin-left: 20px; */
     }
   }
   a {
@@ -37,6 +40,10 @@ export const OurWorksSection = styled.section`
     aspect-ratio: 1 / 1;
     /* background-color: #404071; */
     border: inset;
+    border-color: #ffffff;
+    border-width: 5px;
+    box-shadow: 4px 1px 20px 9px #00000047;
+    transition: border-color 0.3s ease-in-out;
     @media (max-width: 350px) {
       aspect-ratio: auto;
     }
@@ -52,6 +59,9 @@ export const OurWorksSection = styled.section`
       opacity: 0.2;
       background-color: #ffffff;
     }
+    :hover {
+      border-color: #3cd0ff;
+    }
   }
   .works--item.featured {
     max-width: 100%;
@@ -62,7 +72,7 @@ export const OurWorksSection = styled.section`
     padding: 30px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: start;
     width: 100%;
     height: 100%;
@@ -118,6 +128,10 @@ export const OurWorksSection = styled.section`
       aspect-ratio: 1 / 1;
       /* background-color: #404071; */
       border: inset;
+      border-color: #ffffff;
+      border-width: 5px;
+      box-shadow: 4px 1px 20px 9px #00000047;
+      transition: border-color 0.3s ease-in-out;
       ::after {
         content: '';
         position: absolute;
@@ -130,6 +144,9 @@ export const OurWorksSection = styled.section`
         opacity: 0.2;
         background-color: #ffffff;
       }
+      :hover {
+        border-color: #3cd0ff;
+      }
     }
     .works--item.featured {
       max-width: 100%;
@@ -140,7 +157,7 @@ export const OurWorksSection = styled.section`
       padding: 30px;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: space-evenly;
       align-items: start;
       width: 100%;
       height: 100%;

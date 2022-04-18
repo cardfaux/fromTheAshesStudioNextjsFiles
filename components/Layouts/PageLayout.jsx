@@ -101,6 +101,10 @@ const StyledWrapper = styled.div`
 
   .page-footer {
     position: relative;
+    @media (max-width: 768px) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
   }
 
   .page-footer::before {
@@ -199,6 +203,8 @@ const StyledWrapper = styled.div`
     padding: 2rem 4rem;
     @media (max-width: 768px) {
       grid-template-columns: 100%;
+      padding-left: 10px;
+      padding-right: 10px;
     }
   }
 

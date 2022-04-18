@@ -8,13 +8,16 @@ import PreviewAlert from 'components/PreviewAlert';
 import { useGetBlogsPages } from 'actions/pagination';
 import { getPaginatedBlogs } from 'lib/api';
 
-import CardItem from 'components/CardItem';
+// import CardItem from 'components/CardItem';
+import NewCardItem from '../../components/Homepage/NewCardItem';
 // import CardItemBlank from 'components/CardItemBlank';
 import CardListItem from 'components/CardListItem';
 // import CardListItemBlank from 'components/CardListItemBlank';
 import moment from 'moment';
 
 import { BlogsPageContainer } from 'styles/components/blogs/BlogsPage';
+
+moment.suppressDeprecationWarnings = true;
 
 export const BlogList = ({ data = [], filter }) => {
   return data.map((page) =>
@@ -34,10 +37,21 @@ export const BlogList = ({ data = [], filter }) => {
         </Col>
       ) : (
         <Col key={blog.slug} lg='4' md='6'>
-          <CardItem
+          {/* <CardItem
             author={blog.author}
             title={blog.title}
             subtitle={blog.subtitle}
+            date={moment(blog.date).format('LL')}
+            image={blog.coverImage}
+            link={{
+              href: '/blogs/[slug]',
+              as: `/blogs/${blog.slug}`,
+            }}
+          /> */}
+          <NewCardItem
+            author={blog.author}
+            title={blog.title}
+            subTitle={blog.subtitle}
             date={moment(blog.date).format('LL')}
             image={blog.coverImage}
             link={{

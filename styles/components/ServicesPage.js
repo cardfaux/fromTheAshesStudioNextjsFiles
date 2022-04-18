@@ -10,4 +10,7 @@ export const ServicesContainer = styled.section`
   display: grid;
   max-width: 1400px;
   margin: auto;
+  @media (max-width: 500px) {
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+  }
 `;

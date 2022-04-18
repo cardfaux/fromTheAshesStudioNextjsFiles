@@ -2,7 +2,8 @@ import { useState } from 'react';
 // import useSWR from 'swr';
 import { Row, Col, Button } from 'react-bootstrap';
 // import AuthorIntro from 'components/AuthorIntro';
-import ProjectsCardItem from '../../components/ProjectsPage/ProjectsCardItem';
+// import ProjectsCardItem from '../../components/ProjectsPage/ProjectsCardItem';
+import NewCardItem from '../../components/Homepage/NewCardItem';
 import CardListItem from 'components/CardListItem';
 // import FilteringMenu, { FilteringProjectsMenu } from 'components/FilteringMenu';
 import FilteringMenu from 'components/FilteringMenu';
@@ -12,6 +13,8 @@ import { getPaginatedProjects } from 'lib/api';
 import moment from 'moment';
 
 import { ProjectsPageContainer } from 'styles/components/projects/ProjectsPage';
+
+moment.suppressDeprecationWarnings = true;
 
 export const ProjectList = ({ data = [], filter }) => {
   return data.map((page) =>
@@ -31,10 +34,21 @@ export const ProjectList = ({ data = [], filter }) => {
         </Col>
       ) : (
         <Col key={project.slug} lg='4' md='6'>
-          <ProjectsCardItem
+          {/* <ProjectsCardItem
             projectTitle={project.projectTitle}
             projectSubtitle={project.projectSubtitle}
             date={moment(project.date).format('LL')}
+            image={project.coverImage}
+            link={{
+              href: '/projects/[slug]',
+              as: `/projects/${project.slug}`,
+            }}
+          /> */}
+          <NewCardItem
+            title={project.projectTitle}
+            subTitle={project.projectSubtitle}
+            date={moment(project.date).format('LL')}
+            // date={moment('project.date', 'MM-DD-YYYY')}
             image={project.coverImage}
             link={{
               href: '/projects/[slug]',

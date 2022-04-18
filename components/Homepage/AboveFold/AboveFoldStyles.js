@@ -17,7 +17,7 @@ export const FoldGrid = styled.div`
   @media (max-width: 768px) {
     position: relative;
     grid-template-columns: 1fr;
-    padding: 0 20px;
+    padding: 0 10px;
   }
   @media (max-width: 450px) {
     grid-template-rows: auto 6rem;
@@ -103,14 +103,11 @@ export const HeaderIconsContainer = styled.div`
     @media (max-width: 450px) {
       z-index: 2;
     }
-
-    .underlay {
+    ::before {
+      content: '';
       width: 100%;
       height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      background-color: white;
+      background-color: #ffffff;
       opacity: 0.2;
     }
   }

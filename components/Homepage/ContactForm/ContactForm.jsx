@@ -47,18 +47,38 @@ export default function App() {
       </ContactForm>
 
       <SocialContainer>
-        <SocialBlock>
-          <TwitterIcon />
-        </SocialBlock>
-        <SocialBlock>
-          <SendIcon />
-        </SocialBlock>
-        <SocialBlock>
-          <LinkedinIcon />
-        </SocialBlock>
-        <SocialBlock>
-          <EmailIcon />
-        </SocialBlock>
+        <a
+          href='https://twitter.com/FromTheAshes205'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          <SocialBlock>
+            <TwitterIcon />
+          </SocialBlock>
+        </a>
+        <a
+          href='https://telegram.me/fromtheashesstudio'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          <SocialBlock>
+            <SendIcon />
+          </SocialBlock>
+        </a>
+        <a
+          href='https://www.linkedin.com/in/james-hagood/'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          <SocialBlock>
+            <LinkedinIcon />
+          </SocialBlock>
+        </a>
+        <a href='mailto:studiofromtheashes.studio@gmail.com'>
+          <SocialBlock>
+            <EmailIcon />
+          </SocialBlock>
+        </a>
       </SocialContainer>
     </ContactFormSection>
   );
