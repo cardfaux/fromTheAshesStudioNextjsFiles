@@ -1,4 +1,3 @@
-import PageLayout from 'components/Layouts/PageLayout';
 import ContactForm from 'components/Homepage/ContactForm/ContactForm';
 import { ContactPageContainer } from '../../styles/components/contact/ContactPage';
 

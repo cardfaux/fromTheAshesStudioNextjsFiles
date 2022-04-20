@@ -17,11 +17,11 @@ export default function App() {
   const {
     register,
     handleSubmit,
-    watch,
+    // watch,
     formState: { errors },
   } = useForm();
 
-  //const onSubmit = (data) => console.log(data);
+  // const onSubmit = (data) => console.log(data);
 
   const onSubmit = (data, e) => {
     fetch('/api/mail', {
@@ -61,8 +61,7 @@ export default function App() {
           {...register('email', {
             required: 'This is required.',
             pattern: {
-              value:
-                /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+              value: /^\S+@\S+$/i,
               message: 'Must be an e-mail address',
             },
           })}
