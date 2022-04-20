@@ -1,3 +1,7 @@
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
+import Script from 'next/script';
+
 import { DefaultSeo } from 'next-seo';
 import ThemeProvider from 'providers/ThemeProvider';
 import { ThemeProvider as StyledThemeProvider } from 'styled-components';
@@ -11,7 +15,9 @@ import {
   faSortNumericUp,
 } from '@fortawesome/free-solid-svg-icons';
 
+import * as ga from '../lib/google-analytics';
 import SEO from '../next-seo.config';
+
 import GlobalStyle from '../styles/GlobalStyles';
 
 import '../styles/globals.css';
@@ -31,8 +37,34 @@ const theme = {
 };
 
 export default function App({ Component, pageProps }) {
+  const router = useRouter();
+
+  useEffect(() => {
+    const handleRouteChange = (url) => {
+      ga.pageview(url);
+    };
+
+    router.events.on('routeChangeComplete', handleRouteChange);
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange);
+    };
+  }, [router.events]);
+
   return (
     <>
+      <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS_ID}`}
+        strategy='afterInteractive'
+      />
+      <Script id='google-analytics-script' strategy='afterInteractive'>
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', '${process.env.GOOGLE_ANALYTICS_ID}');
+        `}
+      </Script>
       <GlobalStyle />
       <StyledThemeProvider theme={theme}>
         <ThemeProvider>

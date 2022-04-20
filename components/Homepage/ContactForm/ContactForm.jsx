@@ -20,9 +20,19 @@ export default function App() {
     watch,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
 
-  console.log(watch('example'));
+  //const onSubmit = (data) => console.log(data);
+
+  const onSubmit = (data, e) => {
+    fetch('/api/mail', {
+      method: 'POST',
+      body: JSON.stringify(data),
+    });
+    // console.log(data);
+    e.target.reset();
+  };
+
+  // console.log(watch('name'));
   // watch input value by passing the name of it
 
   return (
@@ -32,17 +42,40 @@ export default function App() {
       <span className='span-write'>write to us</span>
       {/* "handleSubmit" will validate your inputs before invoking "onSubmit" */}
       <ContactForm onSubmit={handleSubmit(onSubmit)}>
-        <input name='name' {...register('name')} />
-        <input type='email' name='email' {...register('email')} />
-        <textarea type='text' name='message' {...register('message')} />
-        {/* register your input into the hook by invoking the "register" function */}
-        {/* <input defaultValue='test' {...register('example')} /> */}
-
-        {/* include validation with required or other standard HTML validation rules */}
-        {/* <input {...register('exampleRequired', { required: true })} /> */}
-        {/* errors will return when field validation fails  */}
-        {errors.exampleRequired && <span>This field is required</span>}
-
+        <input
+          placeholder='full name'
+          name='name'
+          {...register('name', {
+            required: 'This is required.',
+            maxLength: {
+              value: 200,
+              message: 'Max Length is 200 Characters.',
+            },
+          })}
+        />
+        {errors.name && <p>{errors.name?.message}</p>}
+        <input
+          placeholder='email'
+          type='email'
+          name='email'
+          {...register('email', {
+            required: 'This is required.',
+            pattern: {
+              value:
+                /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+              message: 'Must be an e-mail address',
+            },
+          })}
+        />
+        {errors.email && <p>{errors.email?.message}</p>}
+        <textarea
+          placeholder='type message here'
+          type='text'
+          rows='6'
+          name='message'
+          {...register('message', { required: 'This is required.' })}
+        />
+        {errors.message && <p>{errors.message?.message}</p>}
         <input type='submit' />
       </ContactForm>
 

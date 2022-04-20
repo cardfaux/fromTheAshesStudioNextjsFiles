@@ -2,18 +2,23 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import md from 'markdown-it';
 
+import { NextSeo } from 'next-seo';
+
 import PageLayout from '../../components/Layouts/PageLayout';
 
 import { ServicesSlugContainer } from 'styles/components/ServicesSlug';
 
 export default function PostPage({ frontmatter, content }) {
   return (
-    <PageLayout>
-      <ServicesSlugContainer className='prose mx-auto'>
-        <h1>{frontmatter.title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: md().render(content) }} />
-      </ServicesSlugContainer>
-    </PageLayout>
+    <>
+      <NextSeo title={frontmatter.metaTitle} description={frontmatter.metaDesc} />
+      <PageLayout>
+        <ServicesSlugContainer className='prose mx-auto'>
+          <h1>{frontmatter.title}</h1>
+          <div dangerouslySetInnerHTML={{ __html: md().render(content) }} />
+        </ServicesSlugContainer>
+      </PageLayout>
+    </>
   );
 }
 

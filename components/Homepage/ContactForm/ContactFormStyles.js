@@ -48,7 +48,40 @@ export const ContactForm = styled.form`
   width: 600px;
   flex-direction: column;
   margin: auto;
-  gap: 1rem;
+  gap: 0.9em;
+  p {
+    margin-bottom: 0;
+  }
+  input,
+  textarea {
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: block;
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding: 6px 10px;
+    width: 100%;
+  }
+  input[type='submit'] {
+    background-color: #ec5990;
+    border-color: #ec5990;
+    letter-spacing: 0.5rem;
+    text-transform: uppercase;
+    width: 100%;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1;
+    margin: 20px 0;
+    padding: 16px 10px;
+    transition: all 0.3s;
+    :hover {
+      background-color: #bf1650;
+    }
+  }
   @media (max-width: 768px) {
     width: 100%;
   }

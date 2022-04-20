@@ -41,12 +41,6 @@ export default class MyDocument extends Document {
             href='https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=optional'
             rel='stylesheet'
           />
-          {/* <link
-            rel='preload'
-            href='https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=optional'
-            as='font'
-            crossOrigin='anonymous'
-          /> */}
         </Head>
         <body>
           <Main />
