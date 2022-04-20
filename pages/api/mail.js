@@ -1,5 +1,3 @@
-import { resolveHref } from 'next/dist/shared/lib/router/router';
-
 const mail = require('@sendgrid/mail');
 
 mail.setApiKey(process.env.SENDGRID_API_KEY);
