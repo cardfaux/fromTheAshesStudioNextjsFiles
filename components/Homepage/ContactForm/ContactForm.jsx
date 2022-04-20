@@ -23,8 +23,8 @@ export default function App() {
 
   // const onSubmit = (data) => console.log(data);
 
-  const onSubmit = (data, e) => {
-    fetch('/api/mail', {
+  const onSubmit = async (data, e) => {
+    await fetch('/api/mail', {
       method: 'POST',
       body: JSON.stringify(data),
     });
