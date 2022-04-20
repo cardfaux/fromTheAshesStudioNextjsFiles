@@ -17,4 +17,4 @@ SANITY_PREVIEW_SECRET=
 
 # Don't forget to run the sanity project by itself in a different terminal
 
-# add changes
+# add changes, just rebuilding again
