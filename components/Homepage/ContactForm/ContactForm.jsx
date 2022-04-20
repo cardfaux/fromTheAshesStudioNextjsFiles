@@ -26,6 +26,7 @@ export default function App() {
   const onSubmit = async (data, e) => {
     await fetch('/api/mail', {
       method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data),
     });
     // console.log(data);
