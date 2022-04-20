@@ -2,17 +2,17 @@ const mail = require('@sendgrid/mail');
 
 mail.setApiKey(process.env.SENDGRID_API_KEY);
 
-export default (req, res) => {
+export default async (req, res) => {
   if (req.method === 'POST') {
     const stringFix = JSON.stringify(req.body);
     const body = JSON.parse(stringFix);
     // const body = JSON.parse(req.body);
 
     const message = `
-  Name: ${body.name}\r\n
-  Email: ${body.email}\r\n
-  Message: ${body.message}
-  `;
+    Name: ${body.name}\r\n
+    Email: ${body.email}\r\n
+    Message: ${body.message}
+    `;
 
     const data = {
       to: 'studiofromtheashes.studio@gmail.com',
