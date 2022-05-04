@@ -60,6 +60,52 @@ div.mb-5.cards-list-items.row {
   color: #3cd0ff !important;
 }
 
+.dropdown-toggle.nav-link {
+  color: #ffffff !important;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  text-transform: uppercase;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.dropdown-menu a.fj-navbar-item.fj-navbar-link {
+  font-size: 14px !important;
+  display: block;
+  width: 100%;
+  padding: 0.25rem 1.5rem;
+  margin: 0;
+  clear: both;
+  font-weight: 400 !important;
+  color: #212529 !important;
+  text-align: inherit;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+  text-transform: capitalize !important;
+}
+
+.dropdown-menu a.fj-navbar-item.fj-navbar-link.active {
+  font-size: 14px !important;
+  display: block;
+  width: 100%;
+  padding: 0.25rem 1.5rem;
+  margin: 0;
+  clear: both;
+  font-weight: 400 !important;
+  color: #00b7f1 !important;
+  text-align: inherit;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+  text-transform: capitalize !important;
+}
+
 @media (max-width: 450px) {
   .custom-shape-divider-top-1649003621 svg {
     width: calc(350% + 1.3px);

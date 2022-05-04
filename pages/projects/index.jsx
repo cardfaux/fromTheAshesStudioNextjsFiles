@@ -70,29 +70,31 @@ export default function Projects({ projects }) {
   const { data, size, setSize, hitEnd } = useGetProjectsPages({ filter });
 
   return (
-    <ProjectsPageContainer>
-      {/* {preview && <PreviewAlert />}
+    <>
+      <ProjectsPageContainer>
+        {/* {preview && <PreviewAlert />}
       <AuthorIntro /> */}
-      <FilteringMenu
-        filter={filter}
-        onChange={(option, value) => setFilter({ ...filter, [option]: value })}
-      />
-      <hr />
-      <Row className='mb-5'>
-        <ProjectList data={data || [projects]} filter={filter} />
-      </Row>
-      <div style={{ textAlign: 'center' }}>
-        <Button
-          onClick={() => setSize(size + 1)}
-          disabled={hitEnd}
-          size='lg'
-          variant='outline-secondary'
-        >
-          {/* {isLoadingMore ? '...' : isReachingEnd ? 'No more blogs' : 'More Blogs'} */}
-          Load More
-        </Button>
-      </div>
-    </ProjectsPageContainer>
+        <FilteringMenu
+          filter={filter}
+          onChange={(option, value) => setFilter({ ...filter, [option]: value })}
+        />
+        <hr />
+        <Row className='mb-5'>
+          <ProjectList data={data || [projects]} filter={filter} />
+        </Row>
+        <div style={{ textAlign: 'center' }}>
+          <Button
+            onClick={() => setSize(size + 1)}
+            disabled={hitEnd}
+            size='lg'
+            variant='outline-secondary'
+          >
+            {/* {isLoadingMore ? '...' : isReachingEnd ? 'No more blogs' : 'More Blogs'} */}
+            Load More
+          </Button>
+        </div>
+      </ProjectsPageContainer>
+    </>
   );
 }
 

@@ -1,4 +1,4 @@
-import { Navbar, Nav } from 'react-bootstrap';
+import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import Link from 'next/link';
 
 import ActiveLink from './ActiveLink';
@@ -40,13 +40,60 @@ const BlogNavbar = ({ theme, toggleTheme }) => {
                 )}
               />
 
-              <Nav.Link
-                as={() => (
-                  <ActiveLink activeClassName='active' href='/services'>
-                    <a className='fj-navbar-item fj-navbar-link'>Services</a>
-                  </ActiveLink>
-                )}
-              />
+              <NavDropdown title='Services' id='basic-nav-dropdown'>
+                <NavDropdown.Item
+                  as={() => (
+                    <ActiveLink
+                      activeClassName='active'
+                      href='/services/alabama-graphic-designers-for-logo-corporate-identity-and-brandiing'
+                    >
+                      <a className='fj-navbar-item fj-navbar-link'>Web Design</a>
+                    </ActiveLink>
+                  )}
+                />
+
+                <NavDropdown.Item
+                  as={() => (
+                    <ActiveLink
+                      activeClassName='active'
+                      href='/services/alabama-web-design-companyweb-development'
+                    >
+                      <a className='fj-navbar-item fj-navbar-link'>Web Dev</a>
+                    </ActiveLink>
+                  )}
+                />
+
+                <NavDropdown.Item
+                  as={() => (
+                    <ActiveLink
+                      activeClassName='active'
+                      href='/services/alabama-web-application-development'
+                    >
+                      <a className='fj-navbar-item fj-navbar-link'>App Dev</a>
+                    </ActiveLink>
+                  )}
+                />
+
+                <NavDropdown.Item
+                  as={() => (
+                    <ActiveLink
+                      activeClassName='active'
+                      href='/services/e-commerce-web-development'
+                    >
+                      <a className='fj-navbar-item fj-navbar-link'>eComm Dev</a>
+                    </ActiveLink>
+                  )}
+                />
+
+                <NavDropdown.Divider />
+                <NavDropdown.Item
+                  as={() => (
+                    <ActiveLink activeClassName='active' href='/services'>
+                      <a className='fj-navbar-item fj-navbar-link'>All Services</a>
+                    </ActiveLink>
+                  )}
+                />
+              </NavDropdown>
 
               <Nav.Link
                 as={() => (

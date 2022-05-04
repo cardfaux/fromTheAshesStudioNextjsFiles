@@ -100,6 +100,11 @@ export const HeaderIconsContainer = styled.div`
     justify-content: center;
     align-items: center;
     outline: 1px solid white;
+    transition: all 0.3s ease-in-out;
+    :hover {
+      outline-color: #ec5990;
+      outline-width: 2px;
+    }
     @media (max-width: 450px) {
       z-index: 2;
     }
