@@ -76,20 +76,57 @@ export const StyledPhoenixContainer = styled.div`
 
 export const HeaderIconsContainer = styled.div`
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
   align-items: center;
   gap: 3rem;
-  margin-top: -2rem;
+  margin-top: 0rem;
   @media (max-width: 768px) {
     position: absolute;
     bottom: 0;
     right: 0;
     padding-right: 20px;
+    flex-direction: column-reverse;
   }
   @media (max-width: 450px) {
+    position: relative;
     width: 100%;
     justify-content: center;
     padding-right: 0;
+  }
+
+  .contact--container__inside a {
+    position: relative;
+    z-index: 1;
+    background-color: #ec5990;
+    border-color: #ec5990;
+    -webkit-letter-spacing: 0.5rem;
+    -moz-letter-spacing: 0.5rem;
+    -ms-letter-spacing: 0.5rem;
+    letter-spacing: 0.5rem;
+    text-transform: uppercase;
+    width: 100%;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1;
+    margin: 20px 0;
+    padding: 16px 10px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    :hover {
+      background-color: #bf1650;
+      text-decoration: none;
+    }
+  }
+
+  .icons--container__inside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 6rem;
   }
 
   .wrapper {

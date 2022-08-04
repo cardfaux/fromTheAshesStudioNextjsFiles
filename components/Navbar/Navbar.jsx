@@ -1,4 +1,4 @@
-import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import { Navbar, Nav } from 'react-bootstrap';
 import Link from 'next/link';
 
 import ActiveLink from './ActiveLink';
@@ -40,7 +40,7 @@ const BlogNavbar = ({ theme, toggleTheme }) => {
                 )}
               />
 
-              <NavDropdown title='Services' id='basic-nav-dropdown'>
+              {/* <NavDropdown title='Services' id='basic-nav-dropdown'>
                 <NavDropdown.Item
                   as={() => (
                     <ActiveLink
@@ -93,7 +93,7 @@ const BlogNavbar = ({ theme, toggleTheme }) => {
                     </ActiveLink>
                   )}
                 />
-              </NavDropdown>
+              </NavDropdown> */}
 
               <Nav.Link
                 as={() => (
