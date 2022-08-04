@@ -22,9 +22,7 @@ export default function PageLayout({ children, className }) {
           <div className='page-footer-grid'>
             <div>
               <h6 className='footer-heading'>from the ashes studio</h6>
-              <p className='footer-body'>
-                It is a long established fact that a reader
-              </p>
+              <p className='footer-body'>immersive web experiences</p>
             </div>
             <div className='justify-self-end'>
               <span className='grid-heading'>contact us</span>
@@ -71,10 +69,10 @@ export default function PageLayout({ children, className }) {
           </div>
         </footer>
         <div className='bottom-part'>
-          <span className='span-bold'>Lorem Ipsum 2022</span>
+          <span className='span-bold'>From The Ashes Studio 2022</span>
           <div className='justify-self-end bottom-flex'>
-            <span className='span-blue margin-right'>Lorem Ipsum</span>
-            <span className='span-blue'>Lorem Ipsum</span>
+            <span className='span-blue margin-right'>Web Design</span>
+            {/* <span className='span-blue'>Immersive Experiences</span> */}
           </div>
         </div>
       </MainContainer>
@@ -159,6 +157,9 @@ const StyledWrapper = styled.div`
     bottom: 0;
     left: 0;
     transform: translateY(2rem);
+    @media (max-width: 450px) {
+      bottom: -7px;
+    }
   }
 
   .justify-self-end {

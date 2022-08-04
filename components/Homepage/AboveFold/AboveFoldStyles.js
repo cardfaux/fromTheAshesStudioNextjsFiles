@@ -127,6 +127,9 @@ export const HeaderIconsContainer = styled.div`
     justify-content: center;
     align-items: center;
     column-gap: 6rem;
+    @media (max-width: 300px) {
+      column-gap: 2rem;
+    }
   }
 
   .wrapper {
